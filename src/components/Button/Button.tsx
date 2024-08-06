@@ -1,5 +1,5 @@
 import './Button.scss'
 
 export const Button = () => {
-  return <button>Button</button>;
+  return <button className='button'>Button</button>;
 }

@@ -8,7 +8,6 @@ export const RegisterPage = () => {
         Name:
         <input type="text" />
       </label>
-      <button>Button</button>
     </form>
   )
 }

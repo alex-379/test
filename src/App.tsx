@@ -4,6 +4,8 @@ import viteLogo from '/vite.svg'
 import './App.scss'
 import { HomePage } from './pages/HomePage/HomePage'
 import { RegisterPage } from './pages/RegisterPage/RegisterPage'
+import { Button } from './components/Button/Button'
+import { Header } from './components/Header/Header'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -19,9 +21,11 @@ function App() {
         </a>
       </div>
       <h1>Vite + React</h1>
+      <Header />
       <HomePage />
       <HomePage />
       <RegisterPage />
+      <Button />
 
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
