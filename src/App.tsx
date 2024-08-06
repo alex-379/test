@@ -23,7 +23,6 @@ function App() {
       <h1>Vite + React</h1>
       <Header />
       <HomePage />
-      <HomePage />
       <RegisterPage />
       <Button />
 

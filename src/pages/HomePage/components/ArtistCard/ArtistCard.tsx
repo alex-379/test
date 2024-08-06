@@ -5,7 +5,7 @@ interface ArtistCardProps {
 }
 
 export interface ArtistDto {
-  counter: number;
+  counter?: number;
   name?: string;
   amount: number;
   avatar: string;

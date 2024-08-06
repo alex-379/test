@@ -1,22 +1,36 @@
 import './HomePage.scss'
-import { ArtistCard } from './components/ArtistCard/ArtistCard'
+import { ArtistCard, ArtistDto } from './components/ArtistCard/ArtistCard'
 
 export const HomePage = () => {
-  const artist = {
-    counter: 1,
-    name: 'name',
-    amount: 2,
-    avatar: "q",
-  }
+  const artists: ArtistDto[] = [
+    {
+      name: 'name',
+      amount: 2,
+      avatar: "q",
+    },
+    {
+      name: 'name2',
+      amount: 20,
+      avatar: "q",
+    },
+    {
+      name: 'name3',
+      amount: 200,
+      avatar: "q",
+    }
+  ]
 
   return (
     <div id="home-page">
-        <div>HomePage</div>
-        <div>HomePage</div>
-        <div>HomePage</div>
-        <div>HomePage</div>
-        <button className='button'>press me</button>
-        <ArtistCard artist={artist}/>
+      <div>HomePage</div>
+      <button className='button'>press me</button>
+      {
+        artists.map((artist, index) =>
+          <ArtistCard 
+            key={`artist-${index}`} 
+            artist={{ ...artist, counter: index + 1 }}
+          />
+        )}
     </div>
   )
 }
